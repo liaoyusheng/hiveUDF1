@@ -1,0 +1,7 @@
+UDF(用户定义函数)
+  ①将jar添加到hive（依次执行）
+      add jar /home/lys/桌面/zlowercase.jar      (将程序打包为jar 上传到linux   名称随意)
+      Create  temporary  function   zlowercase  as 'ToLowerCase';（ToLowerCase主函数所在的包名）
+  ②将函数添加到函数列表（show functions;  查看函数列表）
+  ③ 添加完毕后，可以如  add()   count() 等使用，  zlowercase("列名")
+      将name 转化为大写： select zlowercase(name) from xxx;
